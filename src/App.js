@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import RemoteConsumer from './components/RemoteConsumer';
+import RemoteConsumer from "./components/RemoteConsumer";
 
 function App() {
   return (
     <div className="App">
-      <RemoteConsumer url="/api/url" />
+      <RemoteConsumer url="https://reqres.in/api/users" />
     </div>
   );
 }
