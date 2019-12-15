@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { UserCard } from "./UserCard";
+import styles from "./RemoteConsumer.module.css";
 
 function toFullName(rawUser) {
   return rawUser.first_name + " " + rawUser.last_name;
@@ -33,12 +34,12 @@ export const RemoteConsumer = props => {
     return <div>No users found!</div>;
   }
   return (
-    <div>
-      <ul>
+    <div className={styles.container}>
+        <h1 className={styles.top}>User List</h1>
+      <ul className={styles.list}>
         {userList.map(user => (
           <UserCard key={user.id} user={user} />
         ))}
-        }
       </ul>
     </div>
   );
